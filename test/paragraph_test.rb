@@ -24,6 +24,12 @@ class ParagraphTest < Minitest::Test
 	def test_puts_paragraph_tags_on_a_quotation
 		input = ParagraphTags.new("'I am having a really good day!'")
 		assert_equal "<p>\n'I am having a really good day!'\n</p>", input.render
-	end 
+	end
+
+	def test_puts_paragraph_tags_on_a_quotation_with_other_markups
+		input = ParagraphTags.new("'I *am* having a **really** good day!'")
+		p input.render	
+		assert_equal "<p>\n'I <em>am</em> having a <strong>really</strong> good day!'\n</p>", input.render
+	end  
 
 end

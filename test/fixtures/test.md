@@ -2,4 +2,4 @@
 
 ## Chapter 1: The Beginning
 
-"Hi!"
+'You just *have* to try the cheesecake,' he said. 'Ever since it appeared in **Food and Wine** this place has been packed every night.'
