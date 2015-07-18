@@ -24,15 +24,15 @@ class Chisel
       end
     end
     @result = result.join("\n\n")
-    to_file = "my_output.html"
-    @output = File.open(to_file, "w")
+    @to_file = "my_output.html"
+    @output = File.open(@to_file, "w")
     @output << @result
-    puts "Converted #{@filename} (#{@filename.length} lines) to my_output.html"
+    puts "Converted #{@filename} (#{@filename.length} lines) to #{@to_file} (#{@to_file.length} lines)"
     @output.close
   end
 end
 
-input = Chisel.new('test.md')
+
 
 
 
