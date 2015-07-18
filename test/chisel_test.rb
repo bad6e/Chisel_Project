@@ -3,8 +3,9 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require '../lib/chisel'
 
-class ChiselTest < Minitest::Test
 
+
+class ChiselTest < Minitest::Test
 
 	def test_render
     markdown_filename = File.expand_path("../fixtures/test.md", __FILE__)

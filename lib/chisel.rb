@@ -1,7 +1,5 @@
-require_relative 'paragraph'
-require_relative 'header'
-require_relative 'fileio'
-
+require './paragraph'
+require './header'
 
 class Chisel
 
@@ -23,14 +21,17 @@ class Chisel
         result << ParagraphTags.new(part).render
       end
     end
-    @result = result.join("\n\n")
+    result = result.join("\n\n")
     @to_file = "my_output.html"
-    @output = File.open(@to_file, "w")
-    @output << @result
-    puts "Converted #{@filename} (#{@filename.length} lines) to #{@to_file} (#{@to_file.length} lines)"
-    @output.close
+    output = File.open(@to_file, "w")
+      output << result
+      puts "Converted #{@filename} (#{@filename.length} lines) to #{@to_file} (#{@to_file.length} lines)"
+    output.close
   end
 end
+
+input = ARGV.first || "test.md"
+puts Chisel.new(input)
 
 
 
