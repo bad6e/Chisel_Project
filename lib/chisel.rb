@@ -1,7 +1,6 @@
-
-
 require_relative 'paragraph'
 require_relative 'header'
+require_relative 'fileio'
 
 
 class Chisel
@@ -24,16 +23,16 @@ class Chisel
         result << ParagraphTags.new(part).render
       end
     end
-    result.join("\n\n")
+    @result = result.join("\n\n")
+    to_file = "my_output.html"
+    @output = File.open(to_file, "w")
+    @output << @result
+    puts "Converted #{@filename} (#{@filename.length} lines) to my_output.html"
+    @output.close
   end
 end
 
-
-puts "Please enter a markdown file: "
-input = gets.chomp.to_s
-
-chisel = Chisel.new(input)
-puts chisel.to_s
+input = Chisel.new('test.md')
 
 
 
