@@ -8,7 +8,7 @@ class Chisel
 
 	def initialize(filename)
     @filename = filename
-  end 
+  end
 
   def to_s
     contents = File.read(@filename)
@@ -17,20 +17,23 @@ class Chisel
     parts.each do |part|
       if part.start_with?("#")
         result << Header.new(part).render
+      elsif part.chars.include?('"')
+        part.tr!('"', '\"')
+        result << ParagraphTags.new(part).render
       else
         result << ParagraphTags.new(part).render
       end
     end
     result.join("\n\n")
-  end 
-end 
+  end
+end
 
 
-# puts "Please enter a markdown file: "
-# input = gets.chomp.to_s
+puts "Please enter a markdown file: "
+input = gets.chomp.to_s
 
-# chisel = Chisel.new(input)
-# puts chisel.to_s
+chisel = Chisel.new(input)
+puts chisel.to_s
 
 
 

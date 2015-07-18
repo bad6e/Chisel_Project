@@ -10,8 +10,6 @@ class ChiselTest < Minitest::Test
     markdown_filename = File.expand_path("../fixtures/test.md", __FILE__)
     html_filename = File.expand_path("../fixtures/test.html", __FILE__)
     chisel = Chisel.new(markdown_filename)
-   
-    #THE PROBLEM IS HERE
     assert_equal chisel.to_s, File.read(html_filename)
-	end 
+	end
 end
