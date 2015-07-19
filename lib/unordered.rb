@@ -20,9 +20,15 @@ class UnorderTag
 
 end
 
+class UnorderTag
+  def initialize(list_items)
+    @list_items
+  end
+end
 
-input = UnorderTag.new("* Sushi\n\n* Mexican")
-p input.render
+UnorderTag.new(['* Sushi', '* Mexican'])
+# input = UnorderTag.new("* Sushi\n\n* Mexican")
+# p input.render
 
 
 

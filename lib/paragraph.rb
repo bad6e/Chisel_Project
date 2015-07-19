@@ -1,6 +1,5 @@
-require './strongtag'
-require './emtag'
-
+require_relative 'strongtag'
+require_relative 'emtag'
 
 class ParagraphTags
 

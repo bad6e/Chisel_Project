@@ -6,11 +6,11 @@ class Header
 		parts = sentence.split("#")
 		@heading = parts.pop.lstrip
 		@count = parts.count
-	end 
+	end
 
 	def render
 		"<h#{count}>#{heading}</h#{count}>"
-	end  
-end 
+	end
+end
 
 
