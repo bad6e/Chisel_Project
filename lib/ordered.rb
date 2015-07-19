@@ -1,25 +1,22 @@
-class UnorderTag
+class OrderTag
 
   attr_reader :sentence
 
-  def initialize(sentence = "* Sushi\n* Mexican")
+  def initialize(sentence = "1. Sushi\n2. Mexican")
     @sentence = sentence
   end
 
   def render
     a = @sentence.split("\n")
     a.each do |word|
-      word.sub!("* ","\t<li>")
+      word.sub!(word[0..2],"\t<li>")
       word.insert(-1,"</li>\n")
     end
-    a.unshift("<ul>\n")
-    a.push("</ul>")
+    a.unshift("<ol>\n")
+    a.push("</ol>")
     a.join("")
-
-
   end
 end
-
 
 
 

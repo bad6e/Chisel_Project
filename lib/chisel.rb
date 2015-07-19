@@ -1,6 +1,9 @@
 require_relative 'paragraph'
 require_relative 'header'
 require_relative 'unordered'
+require_relative 'ordered'
+
+
 
 class Chisel
 
@@ -18,6 +21,8 @@ class Chisel
         @result << Header.new(part).render
       elsif part.start_with?("* ")
         @result << UnorderTag.new(part).render
+      elsif part.start_with?("1. ")
+        @result << OrderTag.new(part).render
       elsif part.chars.include?('"')
         part.tr!('"', '\"')
        @result << ParagraphTags.new(part).render
@@ -37,6 +42,7 @@ end
 
 input = ARGV.first || "test.md"
 Chisel.new(input).parse_markdown
+
 
 
 

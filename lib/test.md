@@ -12,3 +12,8 @@ My favorite cuisines are:
 
 * Sushi
 * Mexican
+* American
+
+1. Sushi
+2. Mexican
+3. Fish

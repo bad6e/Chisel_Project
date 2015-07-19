@@ -11,8 +11,4 @@ class ChiselTest < Minitest::Test
     chisel = Chisel.new(markdown_filename)
     assert_equal File.read(html_filename), chisel.parse_markdown
 	end
-
-  # def test_writes_html_file_from_markdown
-
-  # end
 end
