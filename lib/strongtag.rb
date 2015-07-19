@@ -13,13 +13,12 @@ class StrongTag
 				result << "<strong>#{phrase}</strong>"
 			else
 				result << phrase
-			end 
-		end 
-		result 
-	end 
+			end
+		end
+		result
+	end
 
-end 
+end
 
 
 
-			
