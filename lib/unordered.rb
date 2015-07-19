@@ -4,7 +4,7 @@ class UnorderTag
 
   attr_reader :sentence
 
-  def initialize(sentence = "* Sushi\n\n* Mexican")
+  def initialize(sentence = "* Sushi\n* Mexican")
     @sentence = sentence
   end
 
@@ -18,11 +18,11 @@ class UnorderTag
     a.unshift("<ul>\n")
     a.push("</ul>")
     a.join("")
+
+
   end
 end
 
 
-UnorderTag.new("* Sushi\n\n* Mexican")
-input = UnorderTag.new("* Sushi\n\n* Mexican")
 
 

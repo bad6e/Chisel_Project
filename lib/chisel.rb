@@ -36,7 +36,7 @@ class Chisel
 end
 
 input = ARGV.first || "test.md"
-puts Chisel.new(input).parse_markdown
+Chisel.new(input).parse_markdown
 
 
 
