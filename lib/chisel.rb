@@ -2,20 +2,12 @@ require_relative 'paragraph'
 require_relative 'header'
 require_relative 'unordered'
 
-
-
-
-
 class Chisel
 
 	def initialize(filename)
     @filename = filename
 
   end
-
-# * poptarts
-# * candy
-# * soda
 
   def parse_markdown
     @result = []
@@ -24,8 +16,8 @@ class Chisel
     parts.each do |part|
       if part.start_with?("#")
         @result << Header.new(part).render
-      # elsif part.start_with?("* ")
-      #   result << UnorderTag.new(part).render
+      elsif part.start_with?("* ")
+        @result << UnorderTag.new(part).render
       elsif part.chars.include?('"')
         part.tr!('"', '\"')
        @result << ParagraphTags.new(part).render

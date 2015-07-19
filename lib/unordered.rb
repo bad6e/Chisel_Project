@@ -1,3 +1,5 @@
+require "pry"
+
 class UnorderTag
 
   attr_reader :sentence
@@ -7,28 +9,38 @@ class UnorderTag
   end
 
   def render
-    result = ""
-    @sentence.split("*").each_with_index do |phrase, index|
-      if index.odd?
-        result << "<ul>\n<li>#{phrase}</li></ul>"
-      else
-        result << phrase
-      end
+    a = @sentence.split("\n\n")
+    a.each do |word|
+      word.sub!("* ","<li>")
+      word.sub!("\n","")
+      puts word
+      word.insert(-1,"</li>")
     end
-    result
+    a.unshift("<ul>\n")
+    a.push("\n</ul>")
+    a.join(" ")
   end
+
 
 end
 
-class UnorderTag
-  def initialize(list_items)
-    @list_items
-  end
-end
+# class UnorderTag
+#   def initialize(list_items)
+#     @list_items
+#   end
+# end
 
-UnorderTag.new(['* Sushi', '* Mexican'])
-# input = UnorderTag.new("* Sushi\n\n* Mexican")
-# p input.render
-
+UnorderTag.new("* Sushi\n\n* Mexican")
+input = UnorderTag.new("* Sushi\n\n* Mexican")
 
 
+
+
+  #  if index.odd?
+  #       result << "<ul>\n<li>#{phrase}</li></ul>"
+  #     else
+  #       result << phrase
+  #     end
+  #   end
+  #   result
+  # end
