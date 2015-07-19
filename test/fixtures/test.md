@@ -5,7 +5,8 @@
 "You just *have* to try the cheesecake," he said. "Ever since it appeared in **Food and Wine** this place has been packed every night."
 
 My favorite cuisines are:
+My favorite cuisines are:
 
-* Sushi
-* Barbeque
-* Mexican
+My favorite cuisines are:
+
+
