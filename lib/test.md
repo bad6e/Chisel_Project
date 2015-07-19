@@ -10,4 +10,5 @@ My favorite cuisines are:
 My favorite cuisines are:
 My favorite cuisines are:
 
-* Hello
+* Sushi
+* Mexican
