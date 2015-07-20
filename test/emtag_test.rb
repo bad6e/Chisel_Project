@@ -3,6 +3,8 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require '../lib/emtag'
 
+
+
 class EmTagTest < Minitest::Test
 
 

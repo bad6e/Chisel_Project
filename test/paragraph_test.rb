@@ -2,6 +2,9 @@ gem 'minitest', '>= 5.7.0'
 require 'minitest/autorun'
 require 'minitest/pride'
 require '../lib/paragraph'
+require './ordered_test'
+require './emtag_test'
+require './strongtag_test'
 
 class ParagraphTest < Minitest::Test
 
