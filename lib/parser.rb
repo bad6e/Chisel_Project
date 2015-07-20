@@ -3,10 +3,12 @@ require_relative 'header'
 require_relative 'unordered'
 require_relative 'ordered'
 
+
 class Parser
 
 	def initialize(filename)
     @filename = filename
+    @file = nil
   end
 
   def parse_markdown
@@ -27,14 +29,14 @@ class Parser
        @result << ParagraphTags.new(part).render
       end
     end
-    @file = @result.join("\n\n")
+    @result.join("\n\n")
+  end
 
-
-    @to_file = "my_output.html"
-    File.open(@to_file, "w") do |file|
-      file.write(@file)
-    end
-    puts "Converted #{@filename} (#{File.readlines(@filename).size} lines) to #{@to_file} (#{File.readlines(@to_file).size} lines)"
+  def file_writer
+    file1 = File.open("my_output.html", 'w')
+    file1.write(parse_markdown)
+    file1.close
+    puts "Converted #{@filename} (#{File.readlines(@filename).size} lines) to my_output.html (#{File.readlines(file1).size} lines)"
   end
 end
 

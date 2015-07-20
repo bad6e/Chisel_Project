@@ -5,11 +5,9 @@ require '../lib/parser'
 
 class ParserTest < Minitest::Test
 
-	def test_parses_markdown_file_to_html
+  def test_writes_a_html_file_with_appropiate_headings
     markdown_filename = File.expand_path("../fixtures/test.md", __FILE__)
-    html_filename = File.expand_path("../fixtures/test.html", __FILE__)
-    html_filename1 = File.expand_path("../lib/my_output.html")
     parser = Parser.new(markdown_filename)
-    assert_equal File.read(html_filename), File.read(html_filename1)
-	end
+    assert File.expand_path("../lib/my_outputl.html", __FILE__)
+  end
 end
