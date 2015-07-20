@@ -3,10 +3,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require '../lib/emtag'
 
-
-
 class EmTagTest < Minitest::Test
-
 
 	def test_puts_em_tags_around_one_word
 		input = EmTag.new("<p>\nI *Love* Hashtags\n</p>")

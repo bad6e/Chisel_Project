@@ -1,4 +1,4 @@
-require_relative 'parser'
+require './parser'
 
 input = ARGV.first || "test.md"
 Parser.new(input).file_writer
