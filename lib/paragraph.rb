@@ -10,6 +10,9 @@ class ParagraphTags
 	def render
     result = StrongTag.new(@sentence).render
     result = EmTag.new(result).render
+    if result.include?("&")
+      result.sub!("&", "&amp;")
+    end
     "<p>\n" + result + "\n</p>"
 	end
 end
