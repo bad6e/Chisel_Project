@@ -15,8 +15,6 @@ class UnorderTag
     a.unshift("<ul>\n")
     a.push("</ul>")
     a.join("")
-
-
   end
 end
 

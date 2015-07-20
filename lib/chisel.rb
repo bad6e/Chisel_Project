@@ -3,13 +3,10 @@ require_relative 'header'
 require_relative 'unordered'
 require_relative 'ordered'
 
-
-
 class Chisel
 
 	def initialize(filename)
     @filename = filename
-
   end
 
   def parse_markdown

@@ -17,7 +17,6 @@ class StrongTag
 		end
 		result
 	end
-
 end
 
 
