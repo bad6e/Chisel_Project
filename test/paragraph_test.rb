@@ -32,4 +32,6 @@ class ParagraphTest < Minitest::Test
 		input = ParagraphTags.new("'I *am* having a **really** good day!'")
 		assert_equal "<p>\n'I <em>am</em> having a <strong>really</strong> good day!'\n</p>", input.render
 	end
+
+	# "*This* is a paragraph."
 end

@@ -19,5 +19,8 @@ class StrongTag
 	end
 end
 
+input = StrongTag.new("Hello")
+puts input.render
+
 
 
