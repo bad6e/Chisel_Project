@@ -6,7 +6,7 @@ require_relative 'ordered'
 
 class Parser
 
-	def initialize(filename)
+  def initialize(filename)
     @filename = filename
     @file = nil
   end
