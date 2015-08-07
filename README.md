@@ -1,12 +1,12 @@
 # Chisel_Project
-This is a bsic Markdown to HTML Parser.
+This is a basic Markdown to HTML Parser.
 
-It supports the following functionality: 
+It supports the following functionality:
 
-* `paragraphs` 
+* `paragraphs`
 * `headers`
-* `lists` - unordered/ordered 
-* `strong tags` 
-* `em tags` 
+* `lists` - unordered/ordered
+* `strong tags`
+* `em tags`
 
-More functionality to come. 
+More functionality to come.
