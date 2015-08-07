@@ -1,8 +1,8 @@
 gem 'minitest', '>= 5.7.0'
 require 'minitest/autorun'
 require 'minitest/pride'
-require '../lib/ordered'
-require './unordered_test'
+require './lib/ordered'
+
 
 class OrderedTagTest < Minitest::Test
 

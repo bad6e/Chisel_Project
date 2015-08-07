@@ -1,8 +1,7 @@
-gem 'minitest', '>= 5.7.0'
 require 'minitest/autorun'
 require 'minitest/pride'
-require '../lib/parser'
-require './paragraph_test'
+require './lib/parser'
+
 
 class ParserTest < Minitest::Test
 

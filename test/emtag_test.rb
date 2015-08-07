@@ -1,7 +1,7 @@
-gem 'minitest', '>= 5.7.0'
+
 require 'minitest/autorun'
 require 'minitest/pride'
-require '../lib/emtag'
+require './lib/emtag'
 
 class EmTagTest < Minitest::Test
 

@@ -1,7 +1,6 @@
-gem 'minitest', '>= 5.7.0'
 require 'minitest/autorun'
 require 'minitest/pride'
-require '../lib/header'
+require './lib/header'
 
 class HeaderTest < Minitest::Test
 
